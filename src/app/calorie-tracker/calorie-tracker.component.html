@@ -1,0 +1,70 @@
+<body>
+
+  <div class="nav-wrapper">
+    <h1>Track your calories</h1>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 mx-auto">
+        <div class="card card-body text-center">
+          <h4 class="heading display-5">Enter your food item and calories</h4>
+
+          <form>
+            <div class="form-group">
+              <label> Food Item </label>
+              <input [(ngModel)]="foodItem" type="text" class="form-control" name="food">
+            </div>
+            <div class="form-group">
+              <label>Number of Calories</label>
+              <input [(ngModel)]="cal" name="number" type="number" class="form-control">
+            </div>
+            <button (click)="onAdd()" class="btn btn-success btn-block mt-3 mb-5">
+              Add</button>
+          </form>
+        </div>
+
+        <div class="container">
+          <h1> Total Calories: {{ total }} </h1>
+        </div>
+        <hr>
+
+
+
+
+        <table class="table table-striped">
+          <thead class="bg-info">
+            <tr class="heading">
+              <th scope="col">Food-Item</th>
+              <th scope="col">Calories</th>
+              <th scope="col">Remove item</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-light">
+              <th scope="row">
+                <h5 *ngFor="let item of calories"> {{item.itemName}}</h5>
+              </th>
+              <td>
+                <h5 *ngFor="let item of calories"> {{item.calories}}</h5>
+              </td>
+              <td>
+                <h4 *ngFor="let item of calories" (click)="onRemove(item)">X</h4>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <!-- <ul class="list-group mt-3">
+          <li class="list-group-item d-flex justify-content-between aling-items-center">
+            <h5 *ngFor="let item of calories">{{ item.itemName }}: ({{ item.calories}}) <i (click)="onRemove(item)"
+                class="fa fa-remove"></i></h5>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+</body>

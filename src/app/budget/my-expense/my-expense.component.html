@@ -1,0 +1,15 @@
+
+
+<mat-accordion center multi="true" *ngIf="expenses.length > 0">
+  <mat-expansion-panel *ngFor="let expense of expenses" >
+    <mat-expansion-panel-header>
+      {{ expense.title }}
+    </mat-expansion-panel-header>
+    <p>you spent ${{ expense.price }} on {{ expense.title }}</p>
+    <mat-action-row>
+      <button mat-button color="primary">EDIT</button>
+      <button mat-button color="warn">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<h5 *ngIf="expenses.length <= 0"> No expenses add Yet</h5>

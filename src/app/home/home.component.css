@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  background: linear-gradient(rgb(236, 148, 148), rgb(118, 175, 223));
+  height: 100vh
+}
+
+
+
+
+h1 {
+  padding-top: 15%;
+}
+
+.col-sm-4{
+  color: darkslategrey;
+  padding-top: 10%;
+}
+
+.card {
+  padding: 10%;
+}

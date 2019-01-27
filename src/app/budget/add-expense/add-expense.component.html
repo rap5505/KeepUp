@@ -1,0 +1,26 @@
+<main>
+  <div class="container">
+    <h5> Track your daily Expenses </h5>
+
+
+
+    <mat-card>
+      <form (submit)="onAddExpense(expenseForm)" #expenseForm="ngForm">
+        <mat-form-field>
+          <input matInput type="text" name="title" ngModel required minlength="3" placeholder="Item Bought" #title="ngModel">
+          <mat-error *ngIf="title.invalid"> Please enter the item purchased</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="number" name="price" ngModel required placeholder="Price" #price="ngModel">
+          <mat-error *ngIf="price.invalid"> Please enter the price</mat-error>
+        </mat-form-field>
+        <br>
+        <br>
+        <button mat-raised-button color="primary" type="submit">Save Post</button>
+      </form>
+    </mat-card>
+    <br>
+    <app-my-expense></app-my-expense>
+  </div>
+</main>

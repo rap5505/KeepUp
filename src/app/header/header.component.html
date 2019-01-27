@@ -1,0 +1,26 @@
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" routerLink="">
+      <h3>Keep Up</h3>
+    </a>
+    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': navbarOpen}">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/create">Create Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addExpense">Add Expense</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/calorie">Calorie Tracker</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
